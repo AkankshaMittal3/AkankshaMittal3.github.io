@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<!-- Header -->
+<div class="header">
+  <h1>Image Grid</h1>
+  <a href="index.html">Go to home page</a>
+</div>
+
+<style>
+  img {
+    margin-top: 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+    float: left;
+  }
+</style>
+
+
+
+<!-- Photo Grid -->
+<div id="grid">
+
+</div>
+
+</body>
+<script>
+  (function () {
+    var images = localStorage.getItem("images");
+    if (images) {
+      var imagesArray = JSON.parse(images);
+      imagesArray.forEach(img => {
+        var gridDiv = document.getElementById("grid");
+        var i = "<div>" + "<img src='" + img.url + "'>"
+        img.name + "</div>";
+        gridDiv.innerHTML += i;
+
+      });
+    }
+
+  })();
+</script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		div1 {
+			margin-left: 70px;
+			font-weight: bold;
+			float: left;
+			clear: left;
+			width: 100px;
+			text-align: left;
+			margin-right: 10px;
+			font-family: sans-serif, bold, Arial, Helvetica;
+			font-size: 14px;
+		}
+
+		div {
+			box-sizing: border-box;
+			width: 100%;
+			border: 100px solid black;
+			float: left;
+			align-content: center;
+			align-items: center;
+		}
+
+
+		form {
+			margin: 0 auto;
+			width: 600px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="text-align: center"> ADMIN FORMS </h1>
+
+	<button onclick="addForm()">Add</button>
+	<button onclick="editForm()">Edit</button>
+	<button onclick="delForm()">Delete</button>
+
+
+	<div style="display: none;" name="RegForm" id="add">
+
+		<p>Name: <input type="text" id="fname" size=65 name="Name"> </p><br>
+		<p>Information: <input type="text" id="info" size=65 name="Info"> </p><br>
+		<p>url: <input type="text" id="url" size=65 name="url"> </p><br>
+		<p>Date: <input type="date" id="date" size=65 name="Date"> </p><br>
+		<p><button onclick="add()">submit</button></p>
+
+	</div>
+
+
+	<div style="display: none;" name="RegForm" id="edit" style="z-index: 1">
+
+		<p>Name: <input type="text" id="editName" size=65 name="Name"> </p><br>
+		<p>Information: <input type="text" id="editInfo" size=65 name="Info"> </p><br>
+		<p>url: <input type="text" id="editUrl" size=65 name="url"> </p><br>
+		<p>Date: <input type="date" id="editDate" size=65 name="Date"> </p><br>
+		<p><button onclick="Editing()">Edit</button></p>
+
+	</div>
+
+	<div style="display: none;" name="RegForm" id="del" style="z-index: 2">
+
+		<p>Name: <input type="text" id="delName" size=65 name="Name"> </p><br>
+
+		<p><button onclick="Delete()">REmove</button></p>
+
+	</div>
+
+</body>
+<script src="galladmin.js"></script>
+
+</html>
